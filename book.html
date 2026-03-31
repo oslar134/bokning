@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Planering</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="stylesheet.css" rel="stylesheet" >
+    </head>
+    <body>
+        <div class="grid_container">
+            <div class="name">
+                <p>
+                    Drive Mate
+                </p>
+                <p>
+                    A new thing every day
+                </p>
+            </div>
+            <div class="logo">
+                <img id="logo_Picture" src="img/Logga.png" alt="Logga Drive Mate">
+            </div>
+            <div class="drop_down">
+                <button class="dropbtn">
+                    <p>
+                        Menu
+                    </p>
+                </button>
+                <div class="drop_down_content">
+                    <div onclick="showAlert('index.html')">
+                        Home page
+                    </div>
+                    <div onclick="showAlert('cars.html')">
+                        Cars
+                    </div>
+                    <div onclick="showAlert('Reset')">
+                        Avsluta / Reset
+                    </div>
+                </div>
+            </div>
+            <div class="booking">
+                <form class="form">
+
+                    <fieldset>
+                        <legend>Personinformation</legend>
+                        <label for="fname">
+                            First name:
+                        </label>
+                        <br>
+                        <input type="text" id="fname" name="fname">
+                        <br>
+                        <label for="lname">
+                            Last name:
+                        </label>
+                        <br>
+                        <input type="text" id="lname" name="lname"> 
+                        <br>
+                        <label for="E-mail">
+                            E-mail:
+                        </label>
+                        <br>
+                        <input type="email" id="email" name="email"> 
+                        <br>
+                        <label for="tel_number">
+                            Telefon nummer
+                        </label>
+                        <br>
+                        <input type="number" id="telnumb" name="telnumb"> 
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Bokningstider</legend>
+                        <label for="hämtdatum">
+                            Hämtningsdatum
+                        </label>
+                        <br>
+                        <input type="date" id="hämtdatum" name="hämtdatum"> 
+                        <br>
+                        <label for="lämndatum">
+                            Återlämningsdatum
+                        </label>
+                        <br>
+                        <input type="date" id="lämndatum" name="lämndatum"> 
+                        <br>
+                        <label for="hämttid">
+                            Tid för att hämta bilen
+                        </label>
+                        <br>
+                        <input type="time" id="hämttid" name="hämttid"> 
+                        <br>
+                        <label for="lämntid">
+                            Tid för att lämna bilen
+                        </label>
+                        <br>
+                        <input type="time" id="lämntid" name="lämntid">
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Bilval</legend>
+                        <label for="bil">
+                            Vilken sorts bil
+                        </label>
+                        <br>
+                        <select id="bil" name="bil">
+                            <option value="sedan">
+                                Sedan
+                            </option>
+                            <option value="kombi">
+                                Kombi
+                            </option>
+                            <option value="suv">
+                                SUV
+                            </option>
+                            <option value="elbil">
+                                Elbil
+                            </option>
+                        </select>
+                        <br>
+                        <br>
+                        <label for="extraval">
+                            Extraval
+                        </label>
+                        <br>
+                        <input type="checkbox" id="extraval1" name="extraval1">
+                        <label for="extraval1">GPS</label>
+                        <br>
+                        <input type="checkbox" id="extraval2" name="extraval2">
+                        <label for="extraval2">taklucka</label>
+                        <br>
+                        <input type="checkbox" id="extraval3" name="extraval3">
+                        <label for="extraval3">dragkrok</label>
+                        <br>
+                        <input type="checkbox" id="extraval4" name="extraval4">
+                        <label for="extraval4">kyld / värmd mugghållare</label>
+                    </fieldset>
+
+                    <input type="submit" value="submit">
+                </form>
+            </div>
+        </div>
+        <script>
+
+            const form = document.querySelector('form');
+
+            form.addEventListener('submit', (e) =>{
+                e.preventDefault();
+                const fd = new FormData();
+                const obj = Object.fromEntries(fd);
+
+                const json = JSON.stringify('obj');
+                localStorage.setItem('form', json);
+
+                window.location.href = 'godkänn_info.html';
+            })
+
+        </script>
+    </body>
+</html>

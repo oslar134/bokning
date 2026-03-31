@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Planering</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="stylesheet.css" rel="stylesheet" >
+    </head>
+    <body>
+        <div class="grid_container">
+            <div class="name">
+                <p>
+                    Drive Mate
+                </p>
+                <p>
+                    A new thing every day
+                </p>
+            </div>
+            <div class="logo">
+                <img id="logo_Picture" src="img/Logga.png" alt="Logga Drive Mate">
+            </div>
+            <div class="data">
+
+            </div>
+        </div>
+        <script>
+            const json = localStorage.getItem('form');
+            const obj = JSON.parse(json);
+    
+            const dataContainer = document.querySelector(".data");
+
+            if (obj) {
+                let allMarkup = ""; 
+
+                for (let key in obj) {
+                    allMarkup += `<div><span> ${key}: ${obj[key]} </span></div>`;
+                }
+
+                dataContainer.innerHTML = allMarkup;
+                } 
+                else {
+                    dataContainer.innerHTML = "Ingen data hittades i localStorage.";
+                }
+</script>
+    </body>
+</html>

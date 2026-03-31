@@ -1,0 +1,130 @@
+.grid_container{
+    display: grid;
+    gap: 10px;
+}
+
+.name{
+    grid-area: name;
+    grid-area: 1 / span 3;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center; 
+    font-weight: bold;
+    font-size: larger;
+    background-color: lightblue;
+    border-radius: 4px;
+}
+
+.info_booking{
+    grid-area: 3 / span 4;
+    background-color: #E6F4FF;
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.terms_rules{
+    grid-area: 4 / span 4;
+    background-color: #E6F4FF;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.info_business{
+    grid-area: 5 / span 4;
+    background-color: #E6F4FF;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.form{
+    gap: 20px;
+}
+
+.booking{
+    display: grid;
+    grid-area: 3 / span 2;
+}
+
+input{
+    margin: 10px;
+}
+
+.logo{
+    grid-area: 1 / span 1;
+}
+
+#logo_Picture{
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.info_contact{
+    grid-area: 7 / span 4;
+    background-color: #E6F4FF;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.drop_down{
+    grid-area: 2 / span 1;
+    position: relative;
+    display: inline-block;
+}
+
+.drop_down_content{
+    display: none;
+    position: absolute;
+    background-color: #E6F4FF;
+    border: 1px solid #ddd;
+    z-index: 1;
+    width: 100px;
+}
+
+.drop_down:hover .drop_down_content{
+    display: block;
+}
+
+.drop_down_content div{
+    padding: 10px;
+    cursor: pointer;
+}
+
+.drop_down_content div:hover{
+    background-color: #e6e6e6;
+}
+
+.dropbtn{
+    background-color: rgba(44, 204, 225, 0.479);
+    color: black;
+    font-size: medium;
+    border: none;
+    cursor: pointer;
+    height: 50px;
+    width: 100px;
+    border-radius: 2px;
+    border-style:ridge;
+}
+
+.book_button_d{
+    grid-area: 2 / span 4;
+}
+
+.book_button{
+    grid-area: 6 / span 4;
+}
+
+#bookingButton{
+    width: 100%;
+    height: 30px;
+    background-color: rgba(44, 204, 225, 0.479);
+    border-radius: 2px;
+    border-style:ridge;
+}
+
+#bookingButton_1{
+    width: 100%;
+    height: 30px;
+    background-color: rgba(44, 204, 225, 0.479);
+    border-radius: 2px;
+    border-style:ridge;
+}
+
+.data{
+    
+}
