@@ -22,27 +22,10 @@
                 <img id="logo_Picture" src="img/Logga.png" alt="Logga Drive Mate">
             </div>
             <div class="data">
-
+                Test
+                <p>Namn:<span id="visningsnamn">Laddar...</span></p>
             </div>
         </div>
-        <script>
-            const json = localStorage.getItem('form');
-            const obj = JSON.parse(json);
-    
-            const dataContainer = document.querySelector(".data");
-
-            if (obj) {
-                let allMarkup = ""; 
-
-                for (let key in obj) {
-                    allMarkup += `<div><span> ${key}: ${obj[key]} </span></div>`;
-                }
-
-                dataContainer.innerHTML = allMarkup;
-                } 
-                else {
-                    dataContainer.innerHTML = "Ingen data hittades i localStorage.";
-                }
-</script>
+        <script src="java.js"></script>
     </body>
 </html>

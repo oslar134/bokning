@@ -61,6 +61,10 @@ input{
     font-family: 'Times New Roman', Times, serif;
 }
 
+
+/*
+Kod under är till drop down button
+*/
 .drop_down{
     grid-area: 2 / span 1;
     position: relative;
@@ -101,6 +105,10 @@ input{
     border-style:ridge;
 }
 
+/*
+Här slutar drop down button
+*/
+
 .book_button_d{
     grid-area: 2 / span 4;
 }
@@ -124,6 +132,8 @@ input{
     border-radius: 2px;
     border-style:ridge;
 }
+
+
 
 .data{
     
