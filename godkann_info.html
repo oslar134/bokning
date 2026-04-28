@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="stylesheet.css" rel="stylesheet" >
     </head>
-    <body>
+    <body id="godkann_info.html">
         <div class="grid_container">
             <div class="name">
                 <p>
@@ -21,9 +21,81 @@
             <div class="logo">
                 <img id="logo_Picture" src="img/Logga.png" alt="Logga Drive Mate">
             </div>
+            <div class="drop_down">
+                <button class="dropbtn">
+                    <p>
+                        Menu
+                    </p>
+                </button>
+                <div class="drop_down_content">
+                    <div onclick="showAlert('index.html')">
+                        Home page
+                    </div>
+                    <div onclick="showAlert('cars.html')">
+                        Cars
+                    </div>
+                </div>
+            </div>
             <div class="data">
-                Test
-                <p>Namn:<span id="visningsnamn">Laddar...</span></p>
+                <p><h4>Stämmer denna informationen?</h4></p>
+                <ul>
+                    <fieldset>
+                        <legend>Personinformation</legend>
+                        <li>
+                            <p>Förnamn: <span id="fname">Laddar...</span></p>
+                        </li>
+                        <li>
+                            <p>Efternamn: <span id="lname">Laddar...</span></p>
+                        </li>
+                        <li>
+                            <p>E-mail: <span id="email">Laddar...</span></p>
+                        </li>
+                        <li>
+                        <p>Telefon nummer: <span id="telnumb">Laddar...</span></p>
+                        </li>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Bokningstider</legend>
+                        <li>
+                            <p>Hämtningsdatum: <span id="hämtdatum">Laddar...</span></p>
+                        </li>
+                        <li>
+                            <p>Återlämningsdatum: <span id="lämndatum">Laddar...</span></p>
+                        </li>
+                        <li>
+                            <p>Tid för att hämta bilen: <span id="hämttid">Laddar...</span></p>
+                        </li>
+                        <li>
+                            <p>Tid för att lämna bilen: <span id="lämntid">Laddar...</span></p>
+                        </li>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Bilval</legend>
+                        <li>
+                            <p>bilvalet: <span id="bil">Laddar...</span></p>
+                        </li>
+                        <li>
+                            <p>GPS: <span id="extraval1">Laddar...</span></p>
+                        </li>
+                        <li>
+                            <p>Taklucka: <span id="extraval2">Laddar...</span></p>
+                        </li>
+                        <li>
+                            <p>Dragkrok: <span id="extraval3">Laddar...</span></p>
+                        </li>
+                        <li>
+                            <p>Kyld/Värmd mugghållare: <span id="extraval4">Laddar...</span></p>
+                        </li>
+                    </fieldset>
+                </ul>
+            </div>
+
+            <div class="godkann_info_button">
+                <button id="godkann_button">
+                    Klicka här för att godkänna informationen?
+                </button>
             </div>
         </div>
         <script src="java.js"></script>

@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="stylesheet.css" rel="stylesheet" >
     </head>
-    <body>
+    <body id="book.html">
         <div class="grid_container">
             <div class="name">
                 <p>
@@ -33,9 +33,6 @@
                     </div>
                     <div onclick="showAlert('cars.html')">
                         Cars
-                    </div>
-                    <div onclick="showAlert('Reset')">
-                        Avsluta / Reset
                     </div>
                 </div>
             </div>
@@ -135,9 +132,15 @@
                         <label for="extraval4">kyld / värmd mugghållare</label>
                     </fieldset>
 
-                    <button type="submit">Spara</button>
+                    <button type="submit" id="skicka_formulär">Spara</button>
                 </form>
-                <a href="godkann_info.html">Klicka här för att testa länken</a>
+            </div>
+
+            <div class="booking_pictures">
+                <img id="Bil1" src="img/Kombi.jpg" alt="Volvo v50 2011">
+                <img id="Bil2" src="img/Sedan.jpg" alt="Volvo s60">
+                <img id="Bil3" src="img/Elbil.jpg" alt="Volvo ex60">
+                <img id="Bil4" src="img/Suv.jpg" alt="Toyota Rav4">
             </div>
         </div>
         <script src="java.js"></script>
