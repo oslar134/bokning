@@ -21,14 +21,12 @@
             <div class="logo">
                 <img id="logo_Picture" src="img/Logga.png" alt="Logga Drive Mate">
             </div>
-            <div class="drop_down">
+            <div class="drop_down">   
                 <button class="dropbtn">
-                    <p>
                         Menu
-                    </p>
                 </button>
-                <div class="drop_down_content">
-                    <div onclick="showAlert('index.html')">
+                <div class="drop_down_content">     <!--Här använder jag mig utav en allert funktion för att byta sida-->
+                    <div onclick="showAlert('index.html')">     
                         Home page
                     </div>
                     <div onclick="showAlert('cars.html')">
@@ -39,13 +37,13 @@
             <div class="booking">
                 <form class="form">
 
-                    <fieldset>
+                    <fieldset>              <!--Här under är formuläret för att boka en bil-->
                         <legend>Personinformation</legend>
                         <label for="fname">
                             First name:
                         </label>
                         <br>
-                        <input type="text" id="fname" name="fname">
+                        <input type="text" id="fname" name="fname">         <!--Type är för typen av info som ska visas, name är för att kunna hitta infon på en annan sida-->
                         <br>
                         <label for="lname">
                             Last name:
@@ -53,21 +51,21 @@
                         <br>
                         <input type="text" id="lname" name="lname"> 
                         <br>
-                        <label for="E-mail">
+                        <label for="email">
                             E-mail:
                         </label>
                         <br>
                         <input type="email" id="email" name="email"> 
                         <br>
-                        <label for="tel_number">
+                        <label for="telnumb">
                             Telefon nummer
                         </label>
                         <br>
                         <input type="number" id="telnumb" name="telnumb"> 
                     </fieldset>
 
-                    <fieldset>
-                        <legend>Bokningstider</legend>
+                    <fieldset>          <!--Jag använder fieldset för att dela upp formuläret-->
+                        <legend>Bokningstider</legend>      <!--legend för att skriva rubrik-->
                         <label for="hämtdatum">
                             Hämtningsdatum
                         </label>
@@ -115,7 +113,7 @@
                         </select>
                         <br>
                         <br>
-                        <label for="extraval">
+                        <label>
                             Extraval
                         </label>
                         <br>
@@ -136,13 +134,13 @@
                 </form>
             </div>
 
-            <div class="booking_pictures">
+            <div class="booking_pictures">          <!--Länkar och visar bilder på sidan-->
                 <img id="Bil1" src="img/Kombi.jpg" alt="Volvo v50 2011">
                 <img id="Bil2" src="img/Sedan.jpg" alt="Volvo s60">
                 <img id="Bil3" src="img/Elbil.jpg" alt="Volvo ex60">
                 <img id="Bil4" src="img/Suv.jpg" alt="Toyota Rav4">
             </div>
         </div>
-        <script src="java.js"></script>
+        <script src="java.js"></script>             <!--Länkar javascriptet-->
     </body>
 </html>

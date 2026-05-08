@@ -2,11 +2,11 @@ const pageId = document.body.id;
 
 console.log("test: " + pageId);
 
-switch (pageId){
+switch (pageId){            //Använder en switch case funktion för att inte köra onödig javascript kod på fel hemsida, man undviker felmedelanden då
     case 'index.html': {
         
         //Button direkt till bokning
-        document.getElementById("bookingButton")?.addEventListener("click", () =>{
+        document.getElementById("bookingButton")?.addEventListener("click", () =>{      //Lyssnar efter att du klickar på knappen
             window.location.href = "book.html";
         })
 
@@ -20,14 +20,16 @@ switch (pageId){
     case 'book.html': {
         
         //Kod för drop button
-        const dropBtn = document.querySelector(".dropbtn");
+        const dropBtn = document.querySelector(".dropbtn");         //Skapar variabler för button och content
         const dropContent = document.querySelector(".drop_down");
 
-        if (dropBtn){
+        if (dropBtn){           //Denna koden är lite gammal, den kollar om knappen finns och sen kollar den om knappen blir klickad på (Ett sätt att undvika felmedelanden innan jag hade switch case)
             dropBtn.onclick = function() {
-                dropContent.classList.toggle("show");
+                dropContent.classList.toggle("show");       //Visar drop down content
             }
         }
+
+        
         window.onclick = function(event){
             if (!event.target.matches("#dropBtn")){
                 if (dropContent && dropContent.classList.contains("show")){
@@ -36,7 +38,7 @@ switch (pageId){
             }
         }
 
-        function showAlert(page){
+        function showAlert(page){       //Skriver ut i konsollen vad programmet gör
             console.log("Du har klickat på " + page);
             window.location.href = page
         }
@@ -45,15 +47,15 @@ switch (pageId){
 
         const form = document.querySelector('form');
 
-            form.addEventListener('submit', (e) =>{
+            form.addEventListener('submit', (e) =>{     //Kollar när submit knappen trycks på i formuläret
                 console.log("test")
                 e.preventDefault();
-                const myformData = new FormData(form);
-                const obj = Object.fromEntries(myformData.entries());
+                const myformData = new FormData(form);      //Sparar listan
+                const obj = Object.fromEntries(myformData.entries());       //Ett sätt att göra om listan till ett javascript objekt
 
-                console.log("Datan som samlats in", obj);
+                console.log("Datan som samlats in", obj);       //Skriver ut datan som sparas
 
-                localStorage.setItem('Användarval', JSON.stringify(obj));
+                localStorage.setItem('Användarval', JSON.stringify(obj));       //Gör om datan till JSON
 
                 console.log("Nu ska datan vara sparad");
 
@@ -64,12 +66,12 @@ switch (pageId){
 
     case "godkann_info.html": {
         
-        const SparadData = localStorage.getItem('Användarval');
+        const SparadData = localStorage.getItem('Användarval');     //Hämtar JSON datan
             
             if (SparadData){
-                const data = JSON.parse(SparadData);
+                const data = JSON.parse(SparadData);        //Om datan finns så gör vi om den igen till läsbar data
 
-                console.log(data);
+                console.log(data);          //Skriver ut datan
 
 
                 //Här är all kod för att skriva ut informationen i html
