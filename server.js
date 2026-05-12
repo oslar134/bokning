@@ -34,4 +34,5 @@ http.createServer(function (request, response) {
 }).listen(PORT, "0.0.0.0", () => {
     console.log("Servern körs på:");
     console.log("http://localhost:" + PORT);
+    console.log("Denna datorns ip adress:" + PORT);
 });

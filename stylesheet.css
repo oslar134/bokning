@@ -163,8 +163,11 @@ Här slutar drop down button
     border-radius: 5px;
 }
 
-.cars{
+.tack{
     grid-area: 3 / span 4;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    background-color: #E6F4FF;
 }
 
 

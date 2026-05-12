@@ -149,6 +149,7 @@ switch (pageId){            //Använder en switch case funktion för att inte k�
 
         document.getElementById('godkann_button').addEventListener('click', () =>{
             console.log('test av knapp för bekräftning av information.')
+            window.location.href = 'tackSida.html';
         })
     break;
     }
